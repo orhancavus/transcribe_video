@@ -20,15 +20,18 @@ def transcribe_audio_whisper(audio_file, model="medium"):
 
 
 # Step 2: Transcribe with Whisper
-def transcribe_audio2srt_fast_whisper(audio_file, model="openai/whisper-large-v3"):
-    # openai/whisper-large-v3
-    json_file = f"output/{audio_file}.json"
-    system_script = f"insanely-fast-whisper --file-name input/{audio_file} --model {model} --transcript-path {json_file} --device mps"
+def transcribe_audio2srt_fast_whisper(
+    audio_file, model="openai/whisper-large-v3", task="transcribe"
+):
+    audio_file_base = os.path.splitext(audio_file)[0]
 
-    print(system_script)
+    json_file = f"output/{audio_file_base}.json"
+    system_script = f"insanely-fast-whisper --file-name input/{audio_file} --model {model} --task {task} --transcript-path {json_file} --device mps"
+
+    print(f"System script :{system_script}")
     os.system(system_script)
 
-    output_srt_file = f"output/{audio_file}.srt"
+    output_srt_file = f"output/{audio_file_base}.srt"
     save_srt_from_json(json_file, output_srt_file)
 
 
@@ -46,9 +49,9 @@ def transcribe_audio_whisper_lib(audio_file, model="medium"):
 
 if __name__ == "__main__":
     youtube_url = "https://www.youtube.com/watch?v=0Vjh5d5rez0"
-    file_name = "video_audio"
+    # file_name = "video_audio"
     # youtube_url = "https://www.youtube.com/watch?v=mjwgy3nzIlI&t=2s"
-    # file_name = "Cernobil2024"
+    file_name = "Cernobil2024"
     file_name_mp3 = f"{file_name}.mp3"
 
     print(f"Downloading audio... {youtube_url}")
@@ -59,7 +62,7 @@ if __name__ == "__main__":
     # transcribe_audio_whisper_lib(file_name_mp3)
     # print("Transcription complete!")
 
-    transcribe_audio2srt_fast_whisper(file_name_mp3)
+    transcribe_audio2srt_fast_whisper(file_name_mp3, task="translate")
 
     if False:
         # print("Write to file...")
