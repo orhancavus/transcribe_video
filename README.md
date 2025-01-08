@@ -1,4 +1,4 @@
-# Extract Video subtitiles to files with Open AI whisper
+# Extract Video subtitiles with Open AI whisper and insanely fast whisper
 
 ## Download audio from youtube video
 
