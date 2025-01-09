@@ -1,0 +1,6 @@
+#bin/bash
+
+Echo "Running transcriber"
+source /Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/activate
+
+/Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/python transcribe_youtube.py

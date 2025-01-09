@@ -1,5 +1,6 @@
 import os
 import whisper
+import argparse
 from subtitels2srt import save_srt_from_json
 
 
@@ -47,7 +48,49 @@ def transcribe_audio_whisper_lib(audio_file, model="medium"):
     return result["text"]
 
 
-if __name__ == "__main__":
+def args():
+    parser = argparse.ArgumentParser(
+        description="Transcribe YouTube audio using different methods."
+    )
+    parser.add_argument(
+        "youtube_url", type=str, help="URL of the YouTube video to transcribe"
+    )
+    parser.add_argument(
+        "file_name", type=str, help="Base name for the downloaded audio file"
+    )
+    parser.add_argument(
+        "method",
+        type=str,
+        choices=["whisper", "fast_whisper", "whisper_lib"],
+        help="Transcription method to use: 'whisper', 'fast_whisper', or 'whisper_lib'",
+    )
+    parser.add_argument(
+        "--task",
+        type=str,
+        default="transcribe",
+        help="Task for fast_whisper method: 'transcribe' or 'translate'",
+    )
+    args = parser.parse_args()
+
+    file_name_mp3 = f"{args.file_name}.mp3"
+
+    print(f"Downloading audio... {args.youtube_url}")
+    download_audio(args.youtube_url, file_name_mp3)
+
+    print(f"Transcribing audio... {file_name_mp3}")
+    if args.method == "whisper":
+        transcribe_audio_whisper(file_name_mp3)
+    elif args.method == "fast_whisper":
+        transcribe_audio2srt_fast_whisper(file_name_mp3, task=args.task)
+    elif args.method == "whisper_lib":
+        transcription = transcribe_audio_whisper_lib(file_name_mp3)
+        with open(f"output/{args.file_name}.txt", "w") as f:
+            f.write(transcription)
+
+    print("Transcription complete!")
+
+
+def run_custom():
     youtube_url = "https://www.youtube.com/watch?v=0Vjh5d5rez0"
     # file_name = "video_audio"
     # youtube_url = "https://www.youtube.com/watch?v=mjwgy3nzIlI&t=2s"
@@ -64,8 +107,8 @@ if __name__ == "__main__":
 
     transcribe_audio2srt_fast_whisper(file_name_mp3, task="translate")
 
-    if False:
-        # print("Write to file...")
-        transcription = transcribe_audio_whisper_lib(file_name_mp3)
-        with open(f"output/{file_name}.txt", "w") as f:
-            f.write(transcription)
+
+if __name__ == "__main__":
+    # args()
+    # exit()
+    run_custom()
