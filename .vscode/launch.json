@@ -20,6 +20,19 @@
                 "run_main"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python Debugger: Current File with Arguments - subtitels2srt",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/subtitels2srt.py",
+            "args": [
+                "--input_file",
+                "example",
+                "--output_file",
+                "example"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }

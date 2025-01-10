@@ -1,20 +1,37 @@
 import os
 import whisper
 import argparse
+import subprocess
+
 from subtitels2srt import save_srt_from_json
 
 
 # Step 1: Download YouTube audio
 def download_audio(youtube_url, output_file):
-    if not os.path.exists(f"input/{output_file}"):
-        system_script = (
-            f'yt-dlp -x --audio-format mp3 -o "input/{output_file}" {youtube_url}'
-        )
-        print(f"{system_script=}")
-        os.system(system_script)
-        os.system("wait")
+    output_path = f"input/{output_file}"
+    if not os.path.exists(output_path):
+        # Ensure the "input" directory exists
+        os.makedirs("input", exist_ok=True)
+
+        system_script = [
+            "yt-dlp",
+            "-x",
+            "--audio-format",
+            "mp3",
+            "-o",
+            output_path,
+            youtube_url,
+        ]
+        print(f"Executing: {' '.join(system_script)}")
+
+        # Run the command and wait until it finishes
+        try:
+            subprocess.run(system_script, check=True)
+            print(f"Download completed: {output_path}")
+        except subprocess.CalledProcessError as e:
+            print(f"An error occurred while downloading: {e}")
     else:
-        print(f"File input/{output_file} already exists. Skipping download.")
+        print(f"File {output_path} already exists. Skipping download.")
 
 
 # Step 2: Transcribe with Whisper

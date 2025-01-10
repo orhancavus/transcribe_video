@@ -21,9 +21,16 @@ def json_to_srt(json_file_path):
         start_time = timedelta(seconds=chunk["timestamp"][0])
         end_time = timedelta(seconds=chunk["timestamp"][1])
 
-        start_time_str = str(start_time).replace(".", ",")
-        end_time_str = str(end_time).replace(".", ",")
-
+        start_time_str = (
+            str(start_time).replace(".", ",")
+            if "." in str(start_time)
+            else str(start_time) + ",000000"
+        )
+        end_time_str = (
+            str(end_time).replace(".", ",")
+            if "." in str(start_time)
+            else str(start_time) + ",990000"
+        )
         srt_lines.append(str(i + 1))
         srt_lines.append(f"{start_time_str} --> {end_time_str}")
         srt_lines.append(chunk["text"].strip())
@@ -47,6 +54,10 @@ def save_srt_from_json(json_file_path, srt_file_path):
 
 if __name__ == "__main__":
     # Example usage:
-    json_file = "output.json"  # Replace with the actual file path
-    srt_file = "output.srt"  # Replace with the desired output file path
+    json_file = (
+        "input_subs/Ujas1984_1989.json"  # Replace with the path to the input JSON file
+    )
+    srt_file = (
+        "output/Ujas1984_1989.srt"  # Replace with the path to the output SRT file
+    )
     save_srt_from_json(json_file, srt_file)
