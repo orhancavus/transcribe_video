@@ -6,6 +6,8 @@ source /Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe
 /Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/python transcribe_youtube.py --youtube_url "https://www.youtube.com/watch?v=UzUYPPuv-pM&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=16" --file_name DPS_Korporation --method fast_whisper --task translate 
 
 
+# cp output/trikvartiri.srt ../srt_translate/input/trikvartiri.srt
+
 #   --youtube_url YOUTUBE_URL
 #                         URL of the YouTube video to transcribe
 #   --file_name FILE_NAME

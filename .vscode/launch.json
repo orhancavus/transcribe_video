@@ -11,13 +11,13 @@
             "program": "${workspaceFolder}/transcribe_youtube.py",
             "args": [
                 "--youtube_url",
-                "https://example.com",
+                "https://www.youtube.com/watch?v=t_5XYkZq1Y0&t=372s",
                 "--file_name",
-                "example",
+                "trikvartiri",
                 "--method",
-                "whisper",
+                "fast_whisper",
                 "--task",
-                "run_main"
+                "translate"
             ],
             "console": "integratedTerminal"
         },
@@ -28,9 +28,9 @@
             "program": "${workspaceFolder}/subtitels2srt.py",
             "args": [
                 "--input_file",
-                "example",
+                "video_audio.json",
                 "--output_file",
-                "example"
+                "video_audio.srt"
             ],
             "console": "integratedTerminal"
         }
