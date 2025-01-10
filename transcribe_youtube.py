@@ -6,12 +6,15 @@ from subtitels2srt import save_srt_from_json
 
 # Step 1: Download YouTube audio
 def download_audio(youtube_url, output_file):
-    system_script = (
-        f'yt-dlp -x --audio-format mp3 -o "input/{output_file}" {youtube_url}'
-    )
-    print(f"{system_script=}")
-    os.system(system_script)
-    os.wait()
+    if not os.path.exists(f"input/{output_file}"):
+        system_script = (
+            f'yt-dlp -x --audio-format mp3 -o "input/{output_file}" {youtube_url}'
+        )
+        print(f"{system_script=}")
+        os.system(system_script)
+        os.system("wait")
+    else:
+        print(f"File input/{output_file} already exists. Skipping download.")
 
 
 # Step 2: Transcribe with Whisper
@@ -62,7 +65,7 @@ def get_command_args():
         "--file_name", type=str, help="Base name for the downloaded audio file"
     )
     parser.add_argument(
-        "--transcrpt_method",
+        "--method",
         type=str,
         choices=["whisper", "fast_whisper", "whisper_lib"],
         help="Transcription method to use: 'whisper', 'fast_whisper', or 'whisper_lib'",
@@ -70,13 +73,14 @@ def get_command_args():
     parser.add_argument(
         "--task",
         type=str,
-        choices=["transcribe", "translate"],
+        choices=["transcribe", "translate", "run_main"],
         default="transcribe",
         help="Task for fast_whisper method: 'transcribe' or 'translate'",
     )
     args = parser.parse_args()
 
-    if not args.youtube_url or not args.file_name or not args.transcrpt_method:
+    if not args.youtube_url or not args.file_name or not args.method:
+        print("ARGS:", args.youtube_url, args.file_name, args.method, args.task)
         parser.print_help()
         parser.exit()
 
@@ -90,11 +94,11 @@ def process_args(args):
     download_audio(args.youtube_url, file_name_mp3)
 
     print(f"Transcribing audio... {file_name_mp3}")
-    if args.transcrpt_method == "whisper":
+    if args.method == "whisper":
         transcribe_audio_whisper(file_name_mp3)
-    elif args.transcrpt_method == "fast_whisper":
+    elif args.method == "fast_whisper":
         transcribe_audio2srt_fast_whisper(file_name_mp3, task=args.task)
-    elif args.transcrpt_method == "whisper_lib":
+    elif args.method == "whisper_lib":
         transcription = transcribe_audio_whisper_lib(file_name_mp3)
         with open(f"output/{args.file_name}.txt", "w") as f:
             f.write(transcription)
@@ -106,7 +110,7 @@ def dowload_transcribe(url, file_name):
     file_name_mp3 = f"{file_name}.mp3"
 
     print(f"Downloading audio... {url}")
-    # download_audio(url, file_name_mp3)
+    download_audio(url, file_name_mp3)
 
     print(f"Transcribing audio... {file_name_mp3}")
     transcribe_audio2srt_fast_whisper(file_name_mp3, task="translate")
@@ -139,12 +143,12 @@ def run_custom():
 
 
 if __name__ == "__main__":
-    args = get_coomand_args()
+    args = get_command_args()
     # exit()
     # run_custom()
-    if args.method == "main":
-        url = "https://www.youtube.com/watch?v=QbyGP8K9c5w&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=8"
-        file_name = "OpitzaAsimilatsia1984_1989"
+    if args.task == "run_main":
+        url = "https://www.youtube.com/watch?v=NkWV4Q9z_-E&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=7"
+        file_name = "Ujas1984_1989"
         dowload_transcribe(url=url, file_name=file_name)
     else:
         process_args(args)

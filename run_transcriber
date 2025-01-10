@@ -3,4 +3,14 @@
 Echo "Running transcriber"
 source /Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/activate
 
-/Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/python transcribe_youtube.py
+/Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/python transcribe_youtube.py --youtube_url "https://www.youtube.com/watch?v=UzUYPPuv-pM&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=16" --file_name DPS_Korporation --method fast_whisper --task translate 
+
+
+#   --youtube_url YOUTUBE_URL
+#                         URL of the YouTube video to transcribe
+#   --file_name FILE_NAME
+#                         Base name for the downloaded audio file
+#   --method {whisper,fast_whisper,whisper_lib}
+#                         Transcription method to use: 'whisper', 'fast_whisper', or 'whisper_lib'
+#   --task {transcribe,translate,run_main}
+#                         Task for fast_whisper method: 'transcribe' or 'translate'
