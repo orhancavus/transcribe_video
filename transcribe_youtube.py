@@ -6,8 +6,8 @@ from subtitels2srt import save_srt_from_json
 
 # Step 1: Download YouTube audio
 def download_audio(youtube_url, output_file):
-    system_script = 'yt-dlp -x --audio-format mp3 -o "{output_file}" {youtube_url}'
-    print(system_script)
+    system_script = f'yt-dlp -x --audio-format mp3 -o "{output_file}" {youtube_url}'
+    print(f"{system_script=}")
     os.system(system_script)
 
 
@@ -16,7 +16,7 @@ def transcribe_audio_whisper(audio_file, model="medium"):
     system_script = (
         f"whisper input/{audio_file} --model {model} -f all --output_dir output"
     )
-    print(system_script)
+    print(f"{system_script=}")
     os.system(system_script)
 
 
@@ -91,21 +91,23 @@ def args():
 
 
 def run_custom():
-    youtube_url = "https://www.youtube.com/watch?v=0Vjh5d5rez0"
+    # youtube_url = "https://www.youtube.com/watch?v=0Vjh5d5rez0"
     # file_name = "video_audio"
     # youtube_url = "https://www.youtube.com/watch?v=mjwgy3nzIlI&t=2s"
-    file_name = "Cernobil2024"
+    youtube_url = "https://www.youtube.com/watch?v=k6RLAsTeIJc&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=5"
+    file_name = "Bulgaria1984"
     file_name_mp3 = f"{file_name}.mp3"
 
-    print(f"Downloading audio... {youtube_url}")
-    # download_audio(youtube_url)
-    # transcribe_audio_whisper(file_name)
+    if False:
+        print(f"Downloading audio... {youtube_url}")
+        download_audio(youtube_url, file_name_mp3)
+        # transcribe_audio_whisper(file_name)
 
-    print(f"Transcribing audio... {file_name_mp3}")
-    # transcribe_audio_whisper_lib(file_name_mp3)
-    # print("Transcription complete!")
-
-    transcribe_audio2srt_fast_whisper(file_name_mp3, task="translate")
+    if True:
+        print(f"Transcribing audio... {file_name_mp3}")
+        # transcribe_audio_whisper_lib(file_name_mp3)
+        # print("Transcription complete!")
+        transcribe_audio2srt_fast_whisper(file_name_mp3, task="translate")
 
 
 if __name__ == "__main__":
