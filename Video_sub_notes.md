@@ -48,6 +48,12 @@ pip install openai-whisper
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu
 ```
 
+## Insanely Fast Usage
+
+```bash
+insanely-fast-whisper --file-name input/video_audio.mp3 --transcript-path output --device mps
+```
+
 ## Additional Links
 
 - [YouTube to Transcript](https://youtubetotranscript.com/)
