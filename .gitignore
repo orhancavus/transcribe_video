@@ -133,3 +133,5 @@ dmypy.json
 notebook/
 .DS_Store
 *.swp
+
+input/
