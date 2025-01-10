@@ -1,53 +1,64 @@
-# Extract Subtitles from YouTube Videos with OpenAI Whisper and Insanely Fast Whisper
+# Transcribe YouTube Audio
 
-Author : Orhan Cavus
-Date   : January 2025
+This script downloads audio from a YouTube video and transcribes it using different methods.
 
-## Download Audio from YouTube
+Author : Orhan Cavus  
+Date   : January 2025  
 
-To download audio from a YouTube video, use the following command:
+## Requirements
 
-```bash
-yt-dlp -x --audio-format mp3 -o "input/video_audio.%(ext)s" <YouTube-URL>
-```
-
-Example:
-
-```bash
-yt-dlp -x --audio-format mp3 -o "input/video_audio.%(ext)s" https://www.youtube.com/watch?v=0Vjh5d5rez0
-```
-
-## Extract Text from Audio with Whisper
-
-Use the following commands to extract text from the downloaded audio using Whisper:
-
-```bash
-whisper input/video_audio.mp3 --model medium
-whisper input/video_audio.mp3 --model large --language English --output_format srt
-whisper input/video_audio.mp3 --model medium --output_format -f {all} --output_dir output
-whisper input/video_audio.mp3 --model medium -f all --output_dir output
-whisper input/video_audio.mp3 --model medium --task translate -f srt --output_dir output
-```
-
-## Extract Text from Audio with Insanely Fast Whisper
-
-For faster transcription, use Insanely Fast Whisper:
-
-[Insanely Fast Whisper GitHub Repository](https://github.com/Vaibhavs10/insanely-fast-whisper)
-
-```bash
-insanely-fast-whisper --file-name input/video_audio.mp3 --transcript-path output/output_new.srt --device mps
-```
+- Python 3.x
+- `yt-dlp`
+- `whisper`
+- `insanely-fast-whisper`
+- `subtitels2srt`
 
 ## Installation
 
-Install the required packages with the following commands:
+Install the required Python packages:
 
 ```bash
-pip install openai-whisper
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cpu
+pip install whisper argparse
 ```
 
-## Additional Links
+Install `yt-dlp`:
 
-- [YouTube to Transcript](https://youtubetotranscript.com/)
+```bash
+pip install yt-dlp
+```
+
+Install `insanely-fast-whisper`:
+
+```bash
+pip install insanely-fast-whisper
+```
+
+## Usage
+
+### Command Line Arguments
+
+- `--youtube_url`: URL of the YouTube video to transcribe.
+- `--file_name`: Base name for the downloaded audio file.
+- `--method`: Transcription method to use: `whisper`, `fast_whisper`, or `whisper_lib`.
+- `--task`: Task for `fast_whisper` method: `transcribe`, `translate`, or `run_main`.
+
+### Example
+
+```bash
+python transcribe_youtube.py --youtube_url "https://www.youtube.com/watch?v=example" --file_name "example_audio" --method "fast_whisper" --task "transcribe"
+```
+
+## Functions
+
+- `download_audio(youtube_url, output_file)`: Downloads audio from a YouTube video.
+- `transcribe_audio_whisper(audio_file, model="medium")`: Transcribes audio using Whisper.
+- `transcribe_audio2srt_fast_whisper(audio_file, model="openai/whisper-large-v3", task="transcribe")`: Transcribes audio using Insanely Fast Whisper and saves as SRT.
+- `transcribe_audio_whisper_lib(audio_file, model="medium")`: Transcribes audio using Whisper library.
+- `get_command_args()`: Parses command line arguments.
+- `process_args(args)`: Processes command line arguments and performs the transcription.
+- `dowload_transcribe(url, file_name)`: Downloads and transcribes audio.
+- `run_custom()`: Custom function for downloading and transcribing audio.
+
+## License
+
+This project is licensed under the MIT License.

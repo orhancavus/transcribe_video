@@ -134,4 +134,4 @@ notebook/
 .DS_Store
 *.swp
 
-input/
+input/*
