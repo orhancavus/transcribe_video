@@ -1,0 +1,623 @@
+1
+0:00:00,000000 --> 0:00:00,990000
+Tanya Cushman Reviewer's name
+
+2
+0:00:04,000000 --> 0:00:04,990000
+How can we use the power of pictures at work?
+
+3
+0:00:08,000000 --> 0:00:08,990000
+How can you visualize what you think, what you know,
+
+4
+0:00:12,000000 --> 0:00:12,990000
+and make that accessible for others to improve collaboration?
+
+5
+0:00:17,000000 --> 0:00:17,990000
+I have been obsessed with this question for 30 years,
+
+6
+0:00:20,000000 --> 0:00:20,990000
+in 20 books, in 200 articles, in more than dozens of experiments.
+
+7
+0:00:25,000000 --> 0:00:25,990000
+And what I found are amazing benefits that happen when you draw,
+
+8
+0:00:30,000000 --> 0:00:30,990000
+when you use visualization software, when you sketch, when you doodle.
+
+9
+0:00:34,000000 --> 0:00:34,990000
+You boost your creativity, you improve collaboration and communication,
+
+10
+0:00:38,000000 --> 0:00:38,990000
+have better conflicts.
+
+11
+0:00:40,000000 --> 0:00:40,990000
+And you also improve your decision quality
+
+12
+0:00:43,000000 --> 0:00:43,990000
+when you visualize the information that you have.
+
+13
+0:00:46,640000 --> 0:00:52,760000
+But what I also found was that many of us don't use the potential of visualization at all.
+
+14
+0:00:53,560000 --> 0:00:56,940000
+We stick to old ways of presenting, of discussing.
+
+15
+0:00:57,740000 --> 0:00:58,640000
+Can I ask you this?
+
+16
+0:00:59,680000 --> 0:01:04,460000
+Who among you still loves standard presentation slides with bullet points?
+
+17
+0:01:04,940000 --> 0:01:05,180000
+Who loves to sit through that? Okay, we have four people. Anyone among you still loves standard presentation slides with bullet points?
+
+18
+0:01:05,180000 --> 0:01:06,880000
+Who loves to sit through that?
+
+19
+0:01:06,880000 --> 0:01:10,820000
+Okay, we have four people.
+
+20
+0:01:10,820000 --> 0:01:12,660000
+For the rest, can you give me alternatives?
+
+21
+0:01:12,660000 --> 0:01:15,540000
+What can you do instead of bombarding people with slides?
+
+22
+0:01:15,540000 --> 0:01:18,620000
+What would be a visual way of working?
+
+23
+0:01:18,620000 --> 0:01:19,620000
+Storytelling.
+
+24
+0:01:19,620000 --> 0:01:20,620000
+What else?
+
+25
+0:01:20,620000 --> 0:01:21,620000
+Prezi.
+
+26
+0:01:21,620000 --> 0:01:22,620000
+Prezi.
+
+27
+0:01:22,620000 --> 0:01:23,620000
+Yes.
+
+28
+0:01:23,620000 --> 0:01:24,620000
+Sketching.
+
+29
+0:01:24,620000 --> 0:01:25
+What else? Mind mapping. Prezi, yes. Sketching. What else?
+
+30
+0:01:25,000000 --> 0:01:25,990000
+Mind mapping.
+
+31
+0:01:26,000000 --> 0:01:26,990000
+Whiteboard, right?
+
+32
+0:01:27,000000 --> 0:01:27,990000
+There are many ways.
+
+33
+0:01:29,740000 --> 0:01:34,660000
+When you invite people to visualize with you, to co-create what you're actually doing, and
+
+34
+0:01:34,660000 --> 0:01:40,860000
+this is the first of many visual metaphors to come, you're sort of laying out a mini
+
+35
+0:01:40,860000 --> 0:01:49,760000
+red carpet to invite them to shine. It's also a red thread that the conversation has
+
+36
+0:01:49,760000 --> 0:01:56
+when you invite others to visualize with you. So what I'd like to share in the next five to six
+
+37
+0:01:56,000000 --> 0:01:56,990000
+minutes with you are three practices that help you to invite others to visualize together.
+
+38
+0:02:03,700000 --> 0:02:08,740000
+But first, can I take you back just a minute to my very first high-stakes presentation,
+
+39
+0:02:08,740000 --> 0:02:15,020000
+not as a university professor, but in my former life as a consultant.
+
+40
+0:02:15,020000 --> 0:02:19,160000
+Client had asked us to analyze if they should enter a new multi-billion market.
+
+41
+0:02:19,160000 --> 0:02:26,160000
+And we worked very hard to analyze this market, and I had produced about 40 data-driven slides to show the client that
+
+42
+0:02:26,160000 --> 0:02:32,640000
+we had worked hard and that he should not enter this business. Just as I was ready to go and
+
+43
+0:02:32,640000 --> 0:02:39,600000
+bombard the client with those slides, my then boss said, Martin, take a seat, hold your horses.
+
+44
+0:02:40,480000 --> 0:02:46,880000
+And instead of me going through the slides, he showed the perplexed audience one sketch,
+
+45
+0:02:46,880000 --> 0:02:50
+one visual metaphor, and it was this one.
+
+46
+0:02:50,000000 --> 0:02:50,990000
+It was a fortress built on sand.
+
+47
+0:02:54,000000 --> 0:02:54,990000
+This guy had just summarized all of my 40 slides in a single image
+
+48
+0:02:58,480000 --> 0:02:59,680000
+because he was right.
+
+49
+0:02:59,680000 --> 0:03:02,520000
+This new market was like a fortress,
+
+50
+0:03:02,520000 --> 0:03:05,720000
+very hard to conquer because of patent shields, economies
+
+51
+0:03:05,720000 --> 0:03:07,560000
+of scale contracts.
+
+52
+0:03:07,560000 --> 0:03:12,520000
+It was not even worth conquering, it was sinking into the sand so to speak, because the technology
+
+53
+0:03:12,520000 --> 0:03:15,540000
+was being replaced by another one.
+
+54
+0:03:15,540000 --> 0:03:19,340000
+And of course the client then asked about details like the patent analysis I had done
+
+55
+0:03:19,340000 --> 0:03:48,340000
+or the contracts and so forth, and I could show finally my slide with that analysis. But this leading with a visual metaphor really changed the dynamics of the conversation. It was much more collaborative. First the overview with this visual metaphor and then the details on demand. And I realized it's all about a conversation. It's much better this way. When you first show overview with the help of a metaphor that by the way the client picked up and used also verbally.
+
+56
+0:03:48,340000 --> 0:03:50,840000
+And that got me thinking as a researcher.
+
+57
+0:03:50,840000 --> 0:03:55,560000
+And in many experiments with managers and students we found three practices that I want
+
+58
+0:03:55,560000 --> 0:04:06,860000
+to share with you that you can use to really reap the power of pictures professionally, and the first one might shock you, especially the design
+
+59
+0:04:06,860000 --> 0:04:11,080000
+aficionados among you.
+
+60
+0:04:11,080000 --> 0:04:17,380000
+If you want visualization, graphic representations to work for you and for collaboration, make
+
+61
+0:04:17,380000 --> 0:04:20,820000
+them ugly.
+
+62
+0:04:20,820000 --> 0:04:22,680000
+Beauty is the enemy of collaboration.
+
+63
+0:04:22,680000 --> 0:04:28,920000
+If something looks too nice, it looks like it doesn't need revision or improvement. I call this the museum effect.
+
+64
+0:04:28,920000 --> 0:04:31,920000
+People just stare and say, yeah, that looks perfect.
+
+65
+0:04:31,920000 --> 0:04:35,240000
+And the thinking stops there. So you want to
+
+66
+0:04:35,240000 --> 0:04:39,640000
+use the power of provisionality. You want to signal with your drawings
+
+67
+0:04:39,640000 --> 0:04:43,680000
+this is work in progress and invite collaboration in this way. So this is
+
+68
+0:04:43,680000 --> 0:04:47,320000
+good news for all of us who are terrible at drawing.
+
+69
+0:04:47,320000 --> 0:04:49,900000
+So it's not a bug, it's a feature.
+
+70
+0:04:49,900000 --> 0:04:54,880000
+The technical term is low perceived finishness.
+
+71
+0:04:54,880000 --> 0:04:56,320000
+It looks provisional.
+
+72
+0:04:56,320000 --> 0:04:58,660000
+It invites collaboration.
+
+73
+0:04:58,660000 --> 0:05:04,120000
+And by the way, banks and telecom companies and insurances have been using this all along.
+
+74
+0:05:04,120000 --> 0:05:05,200000
+It's called pencil selling.
+
+75
+0:05:06,040000 --> 0:05:08,180000
+When instead of using shiny slides,
+
+76
+0:05:08,280000 --> 0:05:11,820000
+you just sketch something with a pencil for a client, like a product.
+
+77
+0:05:12,520000 --> 0:05:15,900000
+In our experiments, we were able to show this actually is much better.
+
+78
+0:05:16,000000 --> 0:05:16,990000
+It leads to more sales.
+
+79
+0:05:17,300000 --> 0:05:20,680000
+So if you want to harness the power of visualization for collaboration,
+
+80
+0:05:21,300000 --> 0:05:22,360000
+make them look ugly.
+
+81
+0:05:22,880000 --> 0:05:24,180000
+Make them look provisional.
+
+82
+0:05:24,300000 --> 0:05:26,160000
+Use sketches and doodles.
+
+83
+0:05:26,160000 --> 0:05:31,440000
+We've shown in our experiments even little tweaks to software to make it look more sketchy
+
+84
+0:05:31,440000 --> 0:05:37,720000
+boosts collaboration and creativity. And this brings me to the second advice I'd like to
+
+85
+0:05:37,720000 --> 0:05:46,380000
+share with you. Like my boss, lead with visual metaphors. Don't just use diagrams, although they are powerful,
+
+86
+0:05:46,380000 --> 0:05:54,920000
+or charts or maps. Visual metaphors are magical. They access what people already know. They
+
+87
+0:05:54,920000 --> 0:06:01,420000
+bring out new solution ideas. They make things much more concrete, like a mini red carpet
+
+88
+0:06:01,420000 --> 0:06:08,860000
+or a red thread. Let me give you an example. In a study that we originally did for BMW Financial Services and then published, we
+
+89
+0:06:08,860000 --> 0:06:17,640000
+used the identical strategy of BMW and communicated it to different staff members, groups.
+
+90
+0:06:17,640000 --> 0:06:22,360000
+Once we used standard bullet point slides, then we used a diagram.
+
+91
+0:06:22,360000 --> 0:06:26,160000
+And for the third group, we used the mountain trail visual metaphor
+
+92
+0:06:26,160000 --> 0:06:28,920000
+with the same content as the other two.
+
+93
+0:06:28,920000 --> 0:06:30,560000
+And guess what?
+
+94
+0:06:30,560000 --> 0:06:35,080000
+For the group where we visualized through the mountain trail the strategy,
+
+95
+0:06:35,080000 --> 0:06:39,280000
+not only did they remember a lot more later on,
+
+96
+0:06:39,280000 --> 0:06:44
+they were also much more motivated to implement the strategy.
+
+97
+0:06:44,000000 --> 0:06:44,990000
+Now, I've never met a metaphor I didn't like,
+
+98
+0:06:46,720000 --> 0:06:52,480000
+but clearly not all metaphors are equally well suited. You want to make sure that the metaphor
+
+99
+0:06:52,480000 --> 0:06:56,960000
+is simpler than what you're trying to explain, that it's concrete and that people have a
+
+100
+0:06:56,960000 --> 0:07:00,800000
+connection with it. And that is hopefully the right connection. I will never use again
+
+101
+0:07:01,360000 --> 0:07:07,880000
+the volcano metaphor as I did once for creativity in a country that is at risk of active volcanoes.
+
+102
+0:07:07,880000 --> 0:07:11,520000
+So choose your metaphors well, and if you do that,
+
+103
+0:07:11,520000 --> 0:07:15,520000
+then it will resonate with people, it will be much more memorable,
+
+104
+0:07:15,520000 --> 0:07:18,720000
+it sticks like a red ribbon on the floor.
+
+105
+0:07:18,720000 --> 0:07:22,560000
+Here's another example of such a visual metaphor.
+
+106
+0:07:22,560000 --> 0:07:27,120000
+It can come from nature, it can come from technology, it can come from mythology, you name it.
+
+107
+0:07:27,120000 --> 0:07:30,600000
+Here, I used the bridge to visualize a few,
+
+108
+0:07:30,600000 --> 0:07:32,720000
+I'm a professor of communications management,
+
+109
+0:07:32,720000 --> 0:07:35,600000
+a few communication problems.
+
+110
+0:07:35,600000 --> 0:07:38,220000
+And so it's simple, also visually,
+
+111
+0:07:38,220000 --> 0:07:42,680000
+and the beauty of this kind of visual,
+
+112
+0:07:42,680000 --> 0:07:44,800000
+we can learn that from comic strips,
+
+113
+0:07:44,800000 --> 0:07:49,240000
+is that it starts a series that people then want to complete.
+
+114
+0:07:49,240000 --> 0:07:51,760000
+And I think that's very powerful in collaboration.
+
+115
+0:07:51,760000 --> 0:07:56,040000
+I call this third practice that I want to share with you in conclusion,
+
+116
+0:07:56,040000 --> 0:07:59,080000
+I call this visual variation.
+
+117
+0:07:59,080000 --> 0:08:02,600000
+You use a metaphor or a diagram, and then you vary it.
+
+118
+0:08:02,600000 --> 0:08:05,880000
+You repeat it, but slightly differently. And the magic
+
+119
+0:08:05,880000 --> 0:08:10,580000
+that this does for collaboration is people start to extend the series you're giving them. So for
+
+120
+0:08:10,580000 --> 0:08:17,220000
+example here, communication is one-sided because of a lack of listening, right? One-way street or
+
+121
+0:08:17,220000 --> 0:08:23,160000
+the bridge is not aligned, there's misunderstandings or it's too full, the too many messages crowd out
+
+122
+0:08:23,160000 --> 0:08:27,320000
+the key message, and people automatically think of other communication problems
+
+123
+0:08:27,320000 --> 0:08:28,920000
+through the metaphor of the bridge,
+
+124
+0:08:28,920000 --> 0:08:31,240000
+like one car going off the bridge,
+
+125
+0:08:31,240000 --> 0:08:33,960000
+maybe because the person is too emotional, right?
+
+126
+0:08:33,960000 --> 0:08:35,280000
+Or the bridge being shaky,
+
+127
+0:08:35,280000 --> 0:08:38,360000
+maybe because there is no trust in the relationship.
+
+128
+0:08:38,360000 --> 0:08:42,040000
+Visual metaphors spark the imagination,
+
+129
+0:08:42,040000 --> 0:08:48,280000
+especially if they come in a series of images. This is by the way
+
+130
+0:08:48,280000 --> 0:08:55,040000
+a very empirically validated theory, it's called variation theory, and it basically
+
+131
+0:08:55,040000 --> 0:09:00,460000
+says that you do not understand anything until you understand it in more than one
+
+132
+0:09:00,460000 --> 0:09:07,120000
+way. And so if you ask me for advice how to make visuals more part of your everyday work, I
+
+133
+0:09:07,120000 --> 0:09:11,920000
+would say start a series, start a simple image, it doesn't have to be sophisticated, and invite
+
+134
+0:09:11,920000 --> 0:09:15,100000
+others to build on that.
+
+135
+0:09:15,100000 --> 0:09:18,080000
+Here is my final example for that.
+
+136
+0:09:18,080000 --> 0:09:22,440000
+As university professors, we often advise students, and many of our students still have
+
+137
+0:09:22,440000 --> 0:09:25,520000
+this stereotypical career path in mind
+
+138
+0:09:25,520000 --> 0:09:29,220000
+that it only goes upward in terms of salary or hierarchy.
+
+139
+0:09:29,360000 --> 0:09:34,380000
+And I drew this visual variation to invite them to think about alternative career trajectories.
+
+140
+0:09:34,500000 --> 0:09:36,300000
+So the career doesn't have to be linear.
+
+141
+0:09:36,440000 --> 0:09:39,420000
+In fact, I find, I don't know how about you,
+
+142
+0:09:40,000000 --> 0:09:40,990000
+that the most intriguing careers are often non-linear,
+
+143
+0:09:44,780000 --> 0:09:48,720000
+are different than this upward staircase model.
+
+144
+0:09:49,840000 --> 0:09:53,800000
+So in conclusion, go forth and visualize or vanish,
+
+145
+0:09:53,800000 --> 0:09:55,640000
+use the power of pictures,
+
+146
+0:09:55,640000 --> 0:09:58,400000
+and when you do that, you will see it boosts your creativity,
+
+147
+0:09:58,400000 --> 0:09:59,520000
+it improves decisions,
+
+148
+0:09:59,520000 --> 0:10:04,280000
+especially if you use images that signal that they are a work in progress,
+
+149
+0:10:04,280000 --> 0:10:09,320000
+that invite others, like a red carpet to shine together,
+
+150
+0:10:09,320000 --> 0:10:12,320000
+to co-create something new together.
+
+151
+0:10:13,120000 --> 0:10:17,640000
+Especially if you don't just rely on abstract diagrams or charts,
+
+152
+0:10:17,640000 --> 0:10:22,560000
+but use the power of visual metaphors to activate what people already know.
+
+153
+0:10:22,560000 --> 0:10:25,720000
+And thirdly, of course, if you don't just use a single image
+
+154
+0:10:25,720000 --> 0:10:28,680000
+and overload that one, but start a sequence
+
+155
+0:10:28,680000 --> 0:10:30,940000
+that your colleagues can build upon.
+
+156
+0:10:30,940000 --> 0:10:32,240000
+Thank you very much.

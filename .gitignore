@@ -134,5 +134,5 @@ notebook/
 .DS_Store
 *.swp
 
-input/*
-output/*
+input/archive/*
+output/archive/*

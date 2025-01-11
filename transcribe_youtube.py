@@ -90,7 +90,7 @@ def get_command_args():
     parser.add_argument(
         "--task",
         type=str,
-        choices=["transcribe", "translate", "run_main"],
+        choices=["transcribe", "translate", "run_main", "custom"],
         default="transcribe",
         help="Task for fast_whisper method: 'transcribe' or 'translate'",
     )
@@ -140,7 +140,7 @@ def run_custom():
     # youtube_url = "https://www.youtube.com/watch?v=mjwgy3nzIlI&t=2s"
     # youtube_url = "https://www.youtube.com/watch?v=k6RLAsTeIJc&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=5"
     youtube_url = "https://www.youtube.com/watch?v=1cD6tuFAPMo&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7"
-    file_name = "KomunistBulgaria1985_40"
+    file_name = "video_audio"
     file_name_mp3 = f"{file_name}.mp3"
 
     function_to_use = (
@@ -167,5 +167,7 @@ if __name__ == "__main__":
         url = "https://www.youtube.com/watch?v=NkWV4Q9z_-E&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=7"
         file_name = "Ujas1984_1989"
         dowload_transcribe(url=url, file_name=file_name)
+    elif args.task == "custom":
+        run_custom()
     else:
         process_args(args)
