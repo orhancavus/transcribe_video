@@ -1,10 +1,22 @@
 #!/bin/bash
 
 Echo "Running transcriber"
-source /Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/activate
+source venv/bin/activate
 
-/Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/venv/bin/python transcribe_youtube.py --youtube_url "https://www.youtube.com/watch?v=UzUYPPuv-pM&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=16" --file_name DPS_Korporation --method fast_whisper --task translate 
+YOUTUBE_URL="https://www.youtube.com/live/k6RLAsTeIJc?si=5ptd8zYmqjei1Oj1"
+FILE_NAME="TN_Vazroditelen_Proteses"
+METHOD="fast_whisper"
+TASK="translate"
 
+# Enable debugging to echo each command
+set -x
+venv/bin/python transcribe_youtube.py \
+    --youtube_url "$YOUTUBE_URL" \
+    --file_name "$FILE_NAME" \
+    --method "$METHOD" \
+    --task "$TASK"
+# Disable debugging
+set +x
 
 # cp output/trikvartiri.srt ../srt_translate/input/trikvartiri.srt
 

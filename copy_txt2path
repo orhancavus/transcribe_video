@@ -1,0 +1,11 @@
+#/bin/bash
+
+# Define the source directory and the destination directory
+SOURCE_DIR="/Users/orhancavus/Development/Python/local_projects/llm_agents/transcribe_video/output"
+DEST_DIR="/Users/orhancavus/LocalDocuments/BG_Politics"
+
+# Create the destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Find and copy all .txt files from subfolders to the destination directory
+find "$SOURCE_DIR" -type f -name "*.txt" -exec cp {} "$DEST_DIR" \;

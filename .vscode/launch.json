@@ -33,6 +33,28 @@
                 "video_audio.srt"
             ],
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: sub2text",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/sub2text.py",
+            "args": [
+                "--file",
+                "output/archive/Bulgaria1984/Bulgaria1984.srt"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: sub2text folder",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/sub2text.py",
+            "args": [
+                "--folder",
+                "output/archive"
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }

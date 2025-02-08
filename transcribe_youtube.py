@@ -1,14 +1,30 @@
+import logging
 import os
 import whisper
 import argparse
 import subprocess
 
-from subtitels2srt import save_srt_from_json
+from subtitles2srt import save_srt_from_json
+from subtitles2text import extraxct_srt_to_text
+
+
+def setup_logging():
+    logging.basicConfig(
+        filename="app.log",  # File to store logs
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    )
+    return logging.getLogger(__name__)
+
+
+logger = setup_logging()
 
 
 # Step 1: Download YouTube audio
 def download_audio(youtube_url, output_file):
     output_path = f"input/{output_file}"
+    logging.info(f"Downloading audio from {youtube_url} to {output_path}")
+
     if not os.path.exists(output_path):
         # Ensure the "input" directory exists
         os.makedirs("input", exist_ok=True)
@@ -33,9 +49,13 @@ def download_audio(youtube_url, output_file):
     else:
         print(f"File {output_path} already exists. Skipping download.")
 
+    logger.info(f"Downloaded audio from {youtube_url} to {output_path}")
+    return output_path
+
 
 # Step 2: Transcribe with Whisper
 def transcribe_audio_whisper(audio_file, model="medium"):
+    logger.info(f"Transcribing audio with Whisper: {audio_file}")
     system_script = (
         f"whisper input/{audio_file} --model {model} -f all --output_dir output"
     )
@@ -47,6 +67,7 @@ def transcribe_audio_whisper(audio_file, model="medium"):
 def transcribe_audio2srt_fast_whisper(
     audio_file, model="openai/whisper-large-v3", task="transcribe"
 ):
+    logger.info(f"Transcribing audio with Fast Whisper: {audio_file}")
     audio_file_base = os.path.splitext(audio_file)[0]
 
     json_file = f"output/{audio_file_base}.json"
@@ -56,7 +77,17 @@ def transcribe_audio2srt_fast_whisper(
     os.system(system_script)
 
     output_srt_file = f"output/{audio_file_base}.srt"
+    logger.info(f"Saving SRT to {output_srt_file}")
     save_srt_from_json(json_file, output_srt_file)
+
+    if os.path.exists(json_file):
+        os.remove(json_file)
+        logger.info(f"Deleted file: {json_file}")
+    else:
+        print(f"File not found: {json_file}")
+
+    logger.info(f"Extracting text from SRT file: {output_srt_file}")
+    extraxct_srt_to_text(output_srt_file)
 
 
 def transcribe_audio_whisper_lib(audio_file, model="medium"):
@@ -64,6 +95,7 @@ def transcribe_audio_whisper_lib(audio_file, model="medium"):
     # device = "mps" if torch.backends.mps.is_available() else "cpu"
     device = "cpu"
     # Load the model
+    logger.info(f"Loading Whisper model: {model}")
     model = whisper.load_model(model, device=device)
 
     # Transcribe audio
@@ -120,6 +152,13 @@ def process_args(args):
         with open(f"output/{args.file_name}.txt", "w") as f:
             f.write(transcription)
 
+    # Delete the mp3 file after transcription
+    if os.path.exists(f"input/{file_name_mp3}"):
+        os.remove(f"input/{file_name_mp3}")
+        print(f"Deleted file: input/{file_name_mp3}")
+    else:
+        print(f"File not found: input/{file_name_mp3}")
+
     print("Transcription complete!")
 
 
@@ -163,6 +202,9 @@ if __name__ == "__main__":
     args = get_command_args()
     # exit()
     # run_custom()
+
+    logger.info(f"Arguments: {args}")
+
     if args.task == "run_main":
         url = "https://www.youtube.com/watch?v=NkWV4Q9z_-E&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7&index=7"
         file_name = "Ujas1984_1989"
@@ -171,3 +213,5 @@ if __name__ == "__main__":
         run_custom()
     else:
         process_args(args)
+
+    logger.info("Finished!")
