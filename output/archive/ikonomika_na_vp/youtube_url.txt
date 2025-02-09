@@ -1,0 +1,4 @@
+portal kultura – "Икономика на "Възродителния процес"
+https://www.youtube.com/live/k6RLAsTeIJc?si=q8weipRzVGMlWfAF
+
+venv/bin/python transcribe_youtube.py --youtube_url 'https://www.youtube.com/live/k6RLAsTeIJc\?si\=q8weipRzVGMlWfAF' --file_name ikonomika_na_vp_bg --method fast_whisper --task transcribe

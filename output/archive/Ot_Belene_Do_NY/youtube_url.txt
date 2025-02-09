@@ -1,0 +1,3 @@
+Ванцети Василев - От "Белене" до Ню Йорк и обратно, Отворени досиета 4 - 10.02.2022 по БНТ
+https://youtu.be/qpMoNXBMxBw\?si\=F5GXIs9r0n9cJRfy
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/qpMoNXBMxBw\?si\=F5GXIs9r0n9cJRfy' --file_name Ot_Belene_Do_NY_en_bg --method fast_whisper --task transcribe

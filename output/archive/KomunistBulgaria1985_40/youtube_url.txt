@@ -1,0 +1,4 @@
+Как комунистическа България опита да заличи турците преди 40 години
+https://youtu.be/1cD6tuFAPMo\?si\=5P1_zaPczMxmYRAZ
+
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/1cD6tuFAPMo\?si\=5P1_zaPczMxmYRAZ' --file_name KomunistBulgaria1985_40_en_bg --method fast_whisper --task transcribe

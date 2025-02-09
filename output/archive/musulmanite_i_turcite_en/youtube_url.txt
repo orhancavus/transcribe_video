@@ -1,0 +1,4 @@
+Мюсюлманите и турците в България след 1878 г.
+https://youtu.be/L6VM6qpmjb4\?si\=je-oJhrjfVFsLPWQ
+
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/L6VM6qpmjb4\?si\=je-oJhrjfVFsLPWQ' --file_name musulmanite_i_turcite_bg --method fast_whisper --task transcribe

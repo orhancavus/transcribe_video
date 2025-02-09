@@ -1,0 +1,3 @@
+Мохамед Узънкъш - "Съпротивата срещу "Възродителния процес", Отворени досиета 4 - 05.11.2022 по БНТ
+https://youtu.be/f3gyeIJO2tU\?si\=t0dLiHvljBJUIaNH
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/f3gyeIJO2tU\?si\=t0dLiHvljBJUIaNH' --file_name Muhammed_Uzunkis_bg --method fast_whisper --task transcribe

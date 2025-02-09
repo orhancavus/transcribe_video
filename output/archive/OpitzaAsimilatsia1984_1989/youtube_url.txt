@@ -1,0 +1,4 @@
+Опитът за асимилация на турците 1984-89 - политика и икономика - и през погледа на един турчин
+https://youtu.be/QbyGP8K9c5w?si=26192mkImFPFnLix
+
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/QbyGP8K9c5w?si=26192mkImFPFnLix' --file_name OpitzaAsimilatsia1984_1989_bg --method fast_whisper --task transcribe 

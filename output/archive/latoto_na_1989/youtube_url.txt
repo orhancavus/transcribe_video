@@ -1,0 +1,4 @@
+The Summer of 89 - Лятото на 89
+https://youtu.be/a1R6_4U3ykI?si=bxPlcUe1NNmxIpy9
+
+venv/bin/python transcribe_youtube.py --youtube_url 'https://youtu.be/a1R6_4U3ykI\?si\=bxPlcUe1NNmxIpy9' --file_name latoto_na_1989_bg --method fast_whisper --task transcribe
