@@ -1,6 +1,7 @@
 # Transcribe YouTube Audio
 
 This script downloads audio from a YouTube video and transcribes it using different methods.
+Note : Be sure to be logged in with youtube account in Safari for Mac OS!!
 
 Author : Orhan Cavus  
 Date   : January 2025  

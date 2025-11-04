@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 import json
 from datetime import timedelta
+import argparse
 
 """
 This script converts transcription data from a JSON file to SRT format and saves it to a specified file.
@@ -69,7 +71,11 @@ def save_srt_from_json(json_file_path, srt_file_path):
 
 
 if __name__ == "__main__":
-    # Example usage:
-    json_file = "input/archive/imeto_tvoeto_ime_radyo_teatir_bg.json"  # Replace with the path to the input JSON file
-    srt_file = "output/archive/imeto_tvoeto_ime_radyo_teatir_bg.srt"  # Replace with the path to the output SRT file
-    save_srt_from_json(json_file, srt_file)
+    parser = argparse.ArgumentParser(
+        description="Convert transcription JSON to SRT format."
+    )
+    parser.add_argument("json_file", help="Path to the input JSON file")
+    parser.add_argument("srt_file", help="Path to the output SRT file")
+    args = parser.parse_args()
+
+    save_srt_from_json(args.json_file, args.srt_file)

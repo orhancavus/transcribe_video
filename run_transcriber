@@ -1,10 +1,12 @@
 #!/bin/bash
 
-Echo "Running transcriber"
+Echo "Running transcriber script - downloading audio from YouTube and transcribing it."
+Echo "First login to youtube in your browser if you haven't done so."
+
 source venv/bin/activate
 
-YOUTUBE_URL="https://www.youtube.com/live/k6RLAsTeIJc?si=5ptd8zYmqjei1Oj1"
-FILE_NAME="TN_Vazroditelen_Proteses"
+YOUTUBE_URL="https://www.youtube.com/watch?v=yk-4mH22EzU&list=PL-CsGB9XKEpRuPPrUplJzrlQ9f5O8bxz7"
+FILE_NAME="Moskva_stiska_zibi"
 METHOD="fast_whisper"
 TASK="translate"
 
