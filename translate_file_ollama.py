@@ -29,21 +29,31 @@ USER_PROMPT_TEMPLATE = (
     "<source>\n{content}\n</source>"
 )
 
+
 def chunk_text(text: str, max_size: int) -> List[str]:
     """Split text into chunks up to max_size without breaking lines."""
     chunks, buf, length = [], [], 0
     for line in text.splitlines(True):  # keep newlines
         if length + len(line) > max_size and buf:
-            chunks.append(''.join(buf))
+            chunks.append("".join(buf))
             buf, length = [line], len(line)
         else:
             buf.append(line)
             length += len(line)
     if buf:
-        chunks.append(''.join(buf))
+        chunks.append("".join(buf))
     return chunks
 
-def ollama_chat(endpoint: str, model: str, system: str, user: str, temperature: float = 0.2, retries: int = 3, timeout: int = 120) -> str:
+
+def ollama_chat(
+    endpoint: str,
+    model: str,
+    system: str,
+    user: str,
+    temperature: float = 0.2,
+    retries: int = 3,
+    timeout: int = 120,
+) -> str:
     """
     Call Ollama's /api/chat (native) endpoint with a system + user message.
     """
@@ -55,9 +65,7 @@ def ollama_chat(endpoint: str, model: str, system: str, user: str, temperature: 
             {"role": "user", "content": user},
         ],
         "stream": False,
-        "options": {
-            "temperature": temperature
-        },
+        "options": {"temperature": temperature},
     }
 
     backoff = 1.0
@@ -79,6 +87,7 @@ def ollama_chat(endpoint: str, model: str, system: str, user: str, temperature: 
     # Should never reach here
     return ""
 
+
 def translate_file(
     input_path: str,
     output_path: str,
@@ -99,12 +108,12 @@ def translate_file(
 
     translated_parts: List[str] = []
 
-    source_hint = "" if source_lang.lower() == "auto" else f"Source language: {source_lang}\n"
+    source_hint = (
+        "" if source_lang.lower() == "auto" else f"Source language: {source_lang}\n"
+    )
     for i, chunk in enumerate(chunks, 1):
         user_prompt = USER_PROMPT_TEMPLATE.format(
-            target_lang=target_lang,
-            source_hint=source_hint,
-            content=chunk
+            target_lang=target_lang, source_hint=source_hint, content=chunk
         )
         print(f"  → Chunk {i}/{len(chunks)} ({len(chunk)} chars)")
         translated = ollama_chat(
@@ -120,17 +129,28 @@ def translate_file(
     out_file.write_text(result, encoding="utf-8")
     print(f"\n✅ Done! Saved to: {out_file}")
 
+
 def main():
     ap = argparse.ArgumentParser(
         description="Translate a text file using a local LLM via Ollama REST."
     )
     ap.add_argument("input", help="Path to input text file (UTF-8)")
     ap.add_argument("-o", "--output", default="translated.txt", help="Output file path")
-    ap.add_argument("-t", "--target", default="en", help="Target language (e.g., en, tr, de)")
+    ap.add_argument(
+        "-t", "--target", default="en", help="Target language (e.g., en, tr, de)"
+    )
     ap.add_argument("-s", "--source", default="auto", help='Source language or "auto"')
     ap.add_argument("-m", "--model", default=DEFAULT_MODEL, help="Ollama model name")
-    ap.add_argument("-e", "--endpoint", default=DEFAULT_ENDPOINT, help="Ollama base URL")
-    ap.add_argument("-c", "--chunk-size", type=int, default=DEFAULT_CHUNK_SIZE, help="Max characters per chunk")
+    ap.add_argument(
+        "-e", "--endpoint", default=DEFAULT_ENDPOINT, help="Ollama base URL"
+    )
+    ap.add_argument(
+        "-c",
+        "--chunk-size",
+        type=int,
+        default=DEFAULT_CHUNK_SIZE,
+        help="Max characters per chunk",
+    )
     ap.add_argument("--temp", type=float, default=0.2, help="Temperature (0–1)")
 
     args = ap.parse_args()
@@ -145,6 +165,7 @@ def main():
         chunk_size=args.chunk_size,
         temperature=args.temp,
     )
+
 
 if __name__ == "__main__":
     main()
